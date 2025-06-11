@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background-color: #0B1D51;
+}
+header{
+    position: sticky;
+    top: 0;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background-color: #483AA0;
+    opacity: 1;
+    z-index: 10;
+}
+.logo{
+    font-size: 2.5rem;
+    user-select: none;
+    color: #8CCDEB;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0.6rem 1.2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 530;
+    color: #8CCDEB;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    border-radius: 1px;
+    background: #1551d4;
+    position: absolute;
+    left: 0px;
+    bottom: -0.4rem;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.menu-button{
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.menu-button svg{
+    fill: #8CCDEB;
+}
+.mobile-menu{
+    height: 50vh;
+    width: 100%;
+    padding: 10px;
+    display: none;
+    font-size: 1rem;
+    font-weight: 700;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #222831;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: #8CCDEB;
+    padding: 10px 0;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vh 0 10vh;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+.home-left-section{
+    height: auto;
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+.home-left-section h1{
+    color: #8CCDEB;
+    font-size: 2.5rem;
+    user-select: none;
+    font-weight: 900;
+}
+.blue{
+    color: #8CCDEB;
+}
+.red{
+    color: #9B3922;
+    
+}
+.social-media{
+    height: 2.2rem;
+    width: 16rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-media a svg {
+    height: 1.5rem;
+    fill: #8E8FFA;
+}
+.social-media a svg:hover{
+    height: 30px;
+    fill: #092e7e;
+}
+.home-buttons{
+    height: 3.4rem;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+.resume-contact{
+    height: 100%;
+    width: 48%;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    padding: 0 1rem;
+    cursor: pointer;
+    gap: 1rem;
+    align-items: center;
+    background-color: #1551d4;
+    border-radius: 1.2rem;
+    justify-content: center;
+    transition: gap 0.3s ease;
+}
+.resume-contact:hover {
+    background-color: #092e7e;
+    gap: 1.5rem;
+}
+.resume-contact svg {
+    height: 40%;
+    fill: #fff;
+}
+.home-right-section {
+    height: auto;
+    width: 45%;
+    margin-top: 2rem;
+}
+.home-right-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.my-intro {
+    height: 90%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    overflow: hidden;
+    gap: 1rem;
+    background-color: #483AA0;
+    color: #EBD3F8;
+    border-radius: 1.2rem;
+}
+.my-intro h1 {
+    font-size: 2.5rem;
+}
+.my-intro p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.about-right-section {
+    height: auto;
+    width: 45%;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+.about-right-section img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#contact {
+    color: #8CCDEB;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+#contact p {
+    padding-top: 1rem;
+}
+.contact-container {
+    padding: 2.5rem;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #483AA0;
+    border-radius: 1.2rem;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 0.7rem;
+    background-color: #8CCDEB;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    outline: none;
+}
+.contact-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #1551d4;
+    color: white;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #092e7e;
+}
+footer {
+    height: auto;
+    padding: 1.5rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+/*------------css for small screens---------*/
+@media (max-width: 768px) {
+    .menu-button{
+        display: block;
+    }
+    #closeIcon{
+        display: none;
+    }
+    nav ul li{
+        display: none;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 0 5vh 0 5vh;
+    }
+    .logo, .home-left-section h1, .my-intro h1{
+        font-size: 1.8rem;
+    }
+    .home-buttons{
+        width: 70%;
+    }
+    .resume-contact{
+        font-size: 0.7rem;
+    }
+    .home-left-section, .home-right-section, .about-right-section , .my-intro{
+        height: auto;
+        width: 100%;
+    }
+    .my-intro p{
+        font-size: 0.8rem;
+    }
+    .mobile-menu.show{
+        display: flex;
+    }
+}
+@media (max-width: 900px){
+    .my-intro p{
+        font-size: 1rem;
+    }
+    .my-intro h1{
+        font-size: 2rem;
+    }
+}
