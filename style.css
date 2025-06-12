@@ -15,19 +15,27 @@ header{
     top: 0;
     height: 5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 0 80px;
     background-color: #483AA0;
     opacity: 1;
     z-index: 10;
 }
 .logo{
+    width: 50%;
     font-size: 2.5rem;
     user-select: none;
     color: #8CCDEB;
+    display: flex;
+    justify-content: flex-start;
 }
-nav ul li{
+.nav-bar{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-bar ul li{
     display: inline-block;
     list-style: none;
     margin: 0.6rem 1.2rem;
@@ -39,7 +47,7 @@ nav ul li a{
     color: #8CCDEB;
     position: relative;
 }
-nav ul li a::after{
+.nav-bar ul li a::after{
     content: '';
     width: 0;
     height: 0.2rem;
@@ -50,8 +58,37 @@ nav ul li a::after{
     bottom: -0.4rem;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+.nav-bar ul li a:hover::after{
     width: 100%;
+}
+.side-bar ul li svg{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    fill: #8CCDEB;
+}
+.side-bar ul{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    z-index: 999;
+    transition: width 0.3s ease;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10vh;
+    padding-top: 3rem;
+}
+.side-bar ul li{
+    list-style: none;
+    margin: 0.6rem 1.2rem;
+}
+.side-bar ul.active{
+    width: 20rem;
 }
 .menu-button{
     height: 1.5rem;
@@ -61,23 +98,6 @@ nav ul li a:hover::after{
 }
 .menu-button svg{
     fill: #8CCDEB;
-}
-.mobile-menu{
-    height: 50vh;
-    width: 100%;
-    padding: 10px;
-    display: none;
-    font-size: 1rem;
-    font-weight: 700;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #222831;
-}
-.mobile-menu a{
-    text-decoration: none;
-    color: #8CCDEB;
-    padding: 10px 0;
 }
 section{
     display: flex;
@@ -239,24 +259,39 @@ section{
 .contact-form button:hover {
     background-color: #092e7e;
 }
+/*------------Footer styles---------------------------*/
 footer {
-    height: auto;
-    padding: 1.5rem;
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
+  background-color: #210F37;
+  color: #fff;
+  height: 10rem;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.socials {
+  margin-top: 0.5rem;
+}
+.socials a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #ffffff;
 }
 /*------------css for small screens---------*/
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .menu-button{
         display: block;
     }
-    #closeIcon{
-        display: none;
-    }
-    nav ul li{
+    .nav-bar ul li{
         display: none;
     }
     section{
@@ -268,9 +303,6 @@ footer {
     .logo, .home-left-section h1, .my-intro h1{
         font-size: 1.8rem;
     }
-    .home-buttons{
-        width: 70%;
-    }
     .resume-contact{
         font-size: 0.7rem;
     }
@@ -281,13 +313,16 @@ footer {
     .my-intro p{
         font-size: 0.8rem;
     }
-    .mobile-menu.show{
-        display: flex;
+    header{
+        padding: 0 25px;
     }
 }
 @media (max-width: 900px){
     .my-intro p{
         font-size: 1rem;
+    }
+    .home-buttons{
+        width: 100%;
     }
     .my-intro h1{
         font-size: 2rem;
