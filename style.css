@@ -328,9 +328,18 @@ footer {
         font-size: 2rem;
     }
 }
+/* Fix unwanted boxy effect on click/focus */
 a:focus,
+a:focus-visible,
 button:focus,
+button:focus-visible,
 .resume-contact:focus,
-.contact-form button:focus {
-    outline: none;
+.resume-contact:focus-visible,
+.contact-form button:focus,
+.contact-form button:focus-visible,
+a svg:focus,
+a svg:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
