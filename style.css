@@ -328,3 +328,11 @@ footer {
         font-size: 2rem;
     }
 }
+a:focus,
+button:focus,
+.resume-contact:focus,
+.contact-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); 
+    border-radius: 0.8rem;
+}
